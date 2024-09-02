@@ -56,12 +56,12 @@ profile.check_outliers()
 profile.data_distribution(truncate=False)
 profile.missing_values()
 profile.generate_pdf_report()
-profile.check_duplicates
-profile.check_data_type_problems
-profile.check_incompleteness
-profile.check_null_empty_values
-profile.check_wrong_dates
-profile.missing_values
+profile.check_duplicates()
+profile.check_data_type_problems()
+profile.check_incompleteness()
+profile.check_null_empty_values()
+profile.check_wrong_dates()
+profile.missing_values()
 ```
 
 ### 3. Validating the Dataset
