@@ -1,6 +1,6 @@
 # DataProfiler
 
-**DataProfiler** is a Python package that performs comprehensive dataset profiling, testing, and validation using PySpark. The package is designed to help data engineers and data scientists quickly identify and address common data quality issues across large datasets.
+**DataProfiler** is a Python package that performs comprehensive dataset profiling and validation using PySpark. The package is designed to help data engineers and data scientists quickly identify and address common data quality issues across large datasets to help them process datasets effectively.
 
 ## Features
 
@@ -30,7 +30,16 @@ from profiler.profiler import Profiler
 spark = SparkSession.builder.appName("DataProfilerApp").getOrCreate()
 
 # Load a dataset (e.g., CSV file)
-df_csv = spark.read.csv("path_to_your_file.csv", header=True, inferSchema=True)
+df_csv = spark.read.csv("path_to_your_file/filename.csv", header=True, inferSchema=True)
+ 
+# Load a Parquet file
+# df_parquet = spark.load_parquet("path/to/your.parquet")
+
+# Load an Excel file
+# df_excel = spark.load_excel("path/to/your.xlsx")
+
+# Load an ORC file
+# df_orc = spark.load_orc("path/to/your.orc")
 
 # Initialize the Profiler with the DataFrame
 profile = Profiler(spark)
@@ -54,8 +63,14 @@ Validate your dataset based on specific criteria:
 from profiler.validator import Validator
 
 validator = Validator(profile)
-validator.check_null_columns(["column1", "column2"])
-validator.validate_data_type("column1", "integer")
+# validator.check_null_columns(["column1", "column2"])
+# validator.validate_data_type("column1", "integer")
+# validator.validate_column_exists("column")
+# validator.validate_no_nulls("column", "column2", "column3")
+# validator.validate_unique("column", "date")
+# validator.validate_category_membership("column", ["Active", "Inactive", "Pending"])
+# validator.validate_cross_field("start_date", "end_date", "less_than")
+
 ```
 
 ### 4. Emailing Reports
@@ -83,7 +98,6 @@ DataProfiler/
 ├── config/
 │   ├── config.yml
 │
-├── main.py
 ├── README.md
 ├── setup.py
 └── requirements.txt
