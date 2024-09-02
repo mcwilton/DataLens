@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="pyprofiler",
-    version="0.1.0",
+    name="dataprofiler",
+    version="1.0.0",
     packages=find_packages(),
     install_requires=[
         "pyspark>=3.0.0",
@@ -15,7 +15,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "pyprofiler=pyprofiler.main:main",
+            "dataprofiler=dataprofiler.main:main",
         ],
     },
     author="McWilton Chikwenengere",
@@ -23,7 +23,7 @@ setup(
     description="A package for dataset profiling, testing, and validation using PySpark",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/mcwilton/pyprofiler",  # Replace with your repository URL
+    url="https://github.com/mcwilton/dataprofiler",  # Replace with your repository URL
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

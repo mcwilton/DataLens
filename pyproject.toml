@@ -1,3 +1,7 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "DataProfiler"
 version = "1.0.0"
@@ -5,6 +9,7 @@ authors = [
   { name="McWilton Chikwenengere", email="mcwilton85@gmail.com" },
 ]
 description = "A Python package for dataset profiling and validation using PySpark."
+dependencies = ["pyspark>=3.0.0", "fpdf", "pandas", "numpy", "matplotlib", "seaborn"]
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [

@@ -5,6 +5,12 @@ __pycache__/
 .DS_Store
 *.log
 
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
