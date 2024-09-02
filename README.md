@@ -46,13 +46,16 @@ profile = Profiler(spark)
 profile.load_data(df_csv)
 ```
 
-### 2. Generating Summary Statistics
+### 2. Profiling the Dataset
 
-Generate and display summary statistics of your dataset:
+Profile the dataset on any criteria:
 
 ```python
 summary = profile.summary_statistics()
-print(summary)
+outliers = profile.check_outliers()
+data_dist = profile.data_distribution(truncate=False)
+missing = profile.missing_values()
+pdf_file = profile.generate_pdf_report()
 ```
 
 ### 3. Validating the Dataset
@@ -75,10 +78,12 @@ validator = Validator(profile)
 
 ### 4. Emailing Reports
 
-After profiling and validation, you can generate a PDF report and send it via email:
+After profiling and/or validation, you can generate a PDF report and send it via email:
 
 ```python
-profile.email_report(recipients=["email1@example.com", "email2@example.com"])
+# Send the report via email
+# recipients = ["person1@example.com", "person2@example.com", "person3@example.com"]
+# profile.send_email_with_report(pdf_file, recipients)
 ```
 
 ## Configuration
