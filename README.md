@@ -51,11 +51,17 @@ profile.load_data(df_csv)
 Profile the dataset on any criteria:
 
 ```python
-summary = profile.summary_statistics()
-outliers = profile.check_outliers()
-data_dist = profile.data_distribution(truncate=False)
-missing = profile.missing_values()
-pdf_file = profile.generate_pdf_report()
+profile.summary_statistics()
+profile.check_outliers()
+profile.data_distribution(truncate=False)
+profile.missing_values()
+profile.generate_pdf_report()
+profile.check_duplicates
+profile.check_data_type_problems
+profile.check_incompleteness
+profile.check_null_empty_values
+profile.check_wrong_dates
+profile.missing_values
 ```
 
 ### 3. Validating the Dataset
@@ -66,13 +72,13 @@ Validate your dataset based on specific criteria:
 from profiler.validator import Validator
 
 validator = Validator(profile)
-# validator.check_null_columns(["column1", "column2"])
-# validator.validate_data_type("column1", "integer")
-# validator.validate_column_exists("column")
-# validator.validate_no_nulls("column", "column2", "column3")
-# validator.validate_unique("column", "date")
-# validator.validate_category_membership("column", ["Active", "Inactive", "Pending"])
-# validator.validate_cross_field("start_date", "end_date", "less_than")
+validator.check_null_columns(["column1", "column2"])
+validator.validate_data_type("column1", "integer")
+validator.validate_column_exists("column")
+validator.validate_no_nulls("column", "column2", "column3")
+validator.validate_unique("column", "date")
+validator.validate_category_membership("column", ["Active", "Inactive", "Pending"])
+validator.validate_cross_field("start_date", "end_date", "less_than")
 
 ```
 
