@@ -72,6 +72,7 @@ Validate your dataset based on specific criteria:
 from profiler.validator import Validator
 
 validator = Validator(profile)
+
 validator.check_null_columns(["column1", "column2"])
 validator.validate_data_type("column1", "integer")
 validator.validate_column_exists("column")
@@ -88,8 +89,8 @@ After profiling and/or validation, you can generate a PDF report and send it via
 
 ```python
 # Send the report via email
-# recipients = ["person1@example.com", "person2@example.com", "person3@example.com"]
-# profile.send_email_with_report(pdf_file, recipients)
+recipients = ["person1@example.com", "person2@example.com", "person3@example.com"]
+profile.send_email_with_report(pdf_file, recipients)
 ```
 
 ## Configuration
