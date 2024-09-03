@@ -1,7 +1,7 @@
 # config.py
 
 # Spark configurations
-SPARK_APP_NAME = "DataProfilerApp"
+SPARK_APP_NAME = "DataLensApp"
 SPARK_MASTER = "local[*]"  # or "yarn" for a cluster setup
 
 # Email configurations
