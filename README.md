@@ -14,7 +14,7 @@
 To install the package, use pip:
 
 ```bash
-pip install dataprofiler
+pip install datalens
 ```
 
 ## Usage
