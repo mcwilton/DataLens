@@ -1,6 +1,6 @@
-# DataProfiler
+# DataLens
 
-**DataProfiler** is a Python package that performs comprehensive dataset profiling and validation using PySpark. The package is designed to help data engineers and data scientists quickly identify and address common data quality issues across large datasets to help them process datasets effectively.
+**DataLens** is a Python package that performs comprehensive dataset profiling and validation using PySpark. The package is designed to help data engineers and data scientists quickly identify and address common data quality issues across large datasets to help them process datasets effectively.
 
 ## Features
 
