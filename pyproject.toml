@@ -3,7 +3,7 @@ requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "DataProfiler"
+name = "DataLens"
 version = "1.0.0"
 authors = [
   { name="McWilton Chikwenengere", email="mcwilton85@gmail.com" },
@@ -19,5 +19,5 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/mcwilton/dataprofiler"
-Issues = "https://github.com/mcwilton/dataprofiler/issues"
+Homepage = "https://github.com/mcwilton/DataLens"
+Issues = "https://github.com/mcwilton/DataLens/issues"
