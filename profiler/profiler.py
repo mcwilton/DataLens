@@ -1,5 +1,6 @@
 from pyspark.sql import DataFrame, SparkSession
-from pyspark.sql.functions import col, isnan, count, when, lit, sum as spark_sum, mean as spark_mean, variance as spark_variance, stddev, skewness, kurtosis
+from pyspark.sql.functions import col, isnan, count, when, lit, sum as spark_sum, mean as spark_mean, \
+    variance as spark_variance, stddev, skewness, kurtosis
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
