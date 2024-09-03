@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="dataprofiler",
+    name="DataLens",
     version="1.0.0",
     packages=find_packages(),
     install_requires=[
@@ -11,11 +11,10 @@ setup(
         "numpy",
         "matplotlib",
         "seaborn",
-        "seaborn",
     ],
     entry_points={
         "console_scripts": [
-            "dataprofiler=dataprofiler.main:main",
+            "datalens=datalens.main:main",
         ],
     },
     author="McWilton Chikwenengere",
@@ -23,7 +22,7 @@ setup(
     description="A package for dataset profiling, testing, and validation using PySpark",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/mcwilton/dataprofiler",  # Replace with your repository URL
+    url="https://github.com/mcwilton/DataLens",  # Replace with your repository URL
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
